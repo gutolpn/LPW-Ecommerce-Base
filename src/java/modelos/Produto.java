@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Produto {
     private String descricao;
     private float preco;
-    public static ArrayList<Produto> lista = new ArrayList();
+    private static ArrayList<Produto> lista = new ArrayList();
     
     public String getDescricao(){
         return this.descricao;
@@ -31,6 +31,15 @@ public class Produto {
     public void setPreco(float preco) {
         this.preco = preco;
     }
+
+    public static ArrayList<Produto> getLista() {
+        return lista;
+    }
+
+    public static void setLista(ArrayList<Produto> lista) {
+        Produto.lista = lista;
+    }
+    
     
     
 }

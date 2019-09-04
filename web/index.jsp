@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Minha Loja</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
@@ -18,15 +18,22 @@
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="#">WebSiteName</a>
+              <a class="navbar-brand" href="#">Minha Loja</a>
             </div>
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Page 1</a></li>
-              <li><a href="#">Page 2</a></li>
-              <li><a href="#">Page 3</a></li>
+              <li class="active"><a href="#">Ofertas</a></li>
+              <li><a href="#">Produtos</a></li>
+              <li><a href="#">Sobre</a></li>            
             </ul>
+ 
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Entrar</a></li>
+
+            </ul>
+
           </div>
+            
         </nav>
         
         <h1>Hello World!</h1>
@@ -39,9 +46,9 @@
         </form>
         
         <%
-            for(int i=0; i<Produto.lista.size(); i++){
+            for(int i=0; i<Produto.getLista().size(); i++){
                 
-                Produto p = Produto.lista.get(i);
+                Produto p = Produto.getLista().get(i);
                 
                 out.println("<pre> "+ p.getDescricao() +" </pre>");
             
