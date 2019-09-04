@@ -8,6 +8,10 @@
         <servlet-name>AddProduto</servlet-name>
         <servlet-class>AddProduto</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>Login</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Teste</servlet-name>
         <url-pattern>/Teste</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>AddProduto</servlet-name>
         <url-pattern>/AddProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
