@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class Produto {
     private String descricao;
     private float preco;
+    private boolean oferta;
     private static ArrayList<Produto> lista = new ArrayList();
     
     public String getDescricao(){
@@ -39,7 +40,14 @@ public class Produto {
     public static void setLista(ArrayList<Produto> lista) {
         Produto.lista = lista;
     }
-    
-    
+
+    public boolean isOferta() {
+        return oferta;
+    }
+
+    public void setOferta(boolean oferta) {
+        this.oferta = oferta;
+    }
+        
     
 }
