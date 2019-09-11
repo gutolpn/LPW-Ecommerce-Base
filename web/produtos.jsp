@@ -13,7 +13,7 @@
         <title>Minha Loja</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
-    <body>
+    <body>                
         
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
@@ -25,38 +25,62 @@
               <li class="active"><a href="produtos.jsp">Produtos</a></li>
               <li><a href="sobre.jsp">Sobre</a></li>            
             </ul>
- 
 
             <ul class="nav navbar-nav navbar-right">
               <li><a href="login.jsp">Entrar</a></li>
-
             </ul>
 
           </div>
-            
         </nav>
-        
-        <h1>Hello World!</h1>
-        
-        <form action="AddProduto" method="post">
-            Descrição: <input name="descricao">
-            Preço: <input name="preco">
+
+        <div class="container">
+            <h1>Produtos da Minha Loja!</h1>
             
-            <button type="submit">OK</button>
-        </form>
-        
-        <%
-            for(int i=0; i<Produto.getLista().size(); i++){
+            <%
+                boolean logado = false;
                 
-                Produto p = Produto.getLista().get(i);
+                if(session != null && 
+                        session.getAttribute("logado") != null){
+                    logado = (boolean)session.getAttribute("logado");
+                }
                 
-                out.println("<pre> "+ p.getDescricao() +" </pre>");
+                if(logado){
+            %>
             
-            }
-        
-        %>
-        
-        
+            <form action="AddProduto" method="post">
+                Descrição: <input name="descricao">
+                Preço: <input name="preco">
+
+                <button type="submit">OK</button>
+            </form>
+
+            <% } %>
+            
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+            <%
+                for(int i=0; i<Produto.getLista().size(); i++){
+
+                    Produto p = Produto.getLista().get(i);
+                    out.println("<tr>");
+                    out.println("<td> "+ (i+1) +" </td>");
+                    out.println("<td> "+ p.getDescricao() +" </td>");
+                    out.println("<td> "+ p.getPreco() +" </td>");
+                    out.println("</tr>");
+                }
+
+            %>
+                </tbody>
+            </table>
+            
+        </div>
         <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
