@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18/09/2019, 17:49:06
+    Author     : gutol
+*/
+
+.ofertas{
+    background-color: lightblue;
+    text-align: center;
+}
+
+.ofertas div{
+    display: inline-block;
+    background-color: lightskyblue;
+    width: 30%;
+    text-align: left;
+}
