@@ -19,3 +19,8 @@ and open the template in the editor.
     width: 30%;
     text-align: left;
 }
+
+.ofertas div img{
+    height: 100px;
+    padding: 5px;
+}
