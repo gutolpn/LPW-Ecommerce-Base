@@ -46,8 +46,8 @@ public class Mock {
         ArrayList<Produto> lista; 
         
         //só cria produtos com lista vazia
-        if(Produto.getLista().isEmpty()){
-            lista = Produto.getLista();
+        if(Produto.lista.isEmpty()){
+            lista = Produto.lista;
             
             Produto caneta = new Produto();
             caneta.setDescricao("Caneta Bic");

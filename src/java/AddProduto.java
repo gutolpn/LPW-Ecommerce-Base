@@ -33,7 +33,7 @@ public class AddProduto extends HttpServlet {
         p.setDescricao(descricao);
         p.setPreco(preco);
         
-        Produto.getLista().add(p);
+        Produto.lista.add(p);
         
         response.sendRedirect("produtos.jsp");
         
