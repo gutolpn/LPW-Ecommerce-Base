@@ -52,9 +52,9 @@
                 </thead>
                 <tbody>
             <%
-                for(int i=0; i<Produto.getLista().size(); i++){
+                for(int i=0; i<Produto.lista.size(); i++){
 
-                    Produto p = Produto.getLista().get(i);
+                    Produto p = Produto.lista.get(i);
                     out.println("<tr>");
                     out.println("<td> "+ (i+1) +" </td>");
                     out.println("<td> "+ p.getDescricao() +" </td>");
