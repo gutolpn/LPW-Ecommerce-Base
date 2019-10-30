@@ -36,7 +36,7 @@
             <form action="AddProduto" method="post">
                 Descrição: <input name="descricao">
                 Preço: <input name="preco">
-
+                <input name="teste" value="3" type="hidden">
                 <button type="submit">OK</button>
             </form>
 
