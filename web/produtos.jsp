@@ -57,7 +57,7 @@
                     Produto p = Produto.lista.get(i);
                     out.println("<tr>");
                     out.println("<td> "+ (i+1) +" </td>");
-                    out.println("<td> "+ p.getDescricao() +" </td>");
+                    out.println("<td> <a href=\"produto.jsp?id="+i+"\">"+ p.getDescricao() +"</a> </td>");
                     out.println("<td> "+ p.getPreco() +" </td>");
                     out.println("</tr>");
                 }
